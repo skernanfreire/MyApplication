@@ -15,19 +15,27 @@ import android.os.Handler;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Handler blinker=new Handler();
+    private Handler blinker0 = new Handler();
+    private Handler blinker1 = new Handler();
+    private Handler blinker2 = new Handler();
+    private Handler blinker3 = new Handler();
     private class Blinker implements Runnable{
         public void run() {
             // blinking
             int j = 0;
+            System.out.println(winningDiscs);
             while (j < 4) {
-                ImageView cell = getBoardImageView((winningDiscs[j][0]),(winningDiscs[j][1])); // TO DO
-                cell.setVisibility(cell.getVisibility() == View.INVISIBLE ? View.VISIBLE : View.INVISIBLE);
-                blinker.postDelayed(this, 400);
+                ImageView cell = getBoardImageView((winningDiscs[j][0]),(winningDiscs[j][1]));
+                cell.setVisibility(cell.getVisibility() == View.VISIBLE ? View.INVISIBLE : View.VISIBLE);
+                if (j==0) blinker0.postDelayed(this, 700);
+                if (j==1) blinker1.postDelayed(this, 700);
+                if (j==2) blinker2.postDelayed(this, 700);
+                if (j==3) blinker3.postDelayed(this, 700);
                 j++;
             }
         }
     }
+
     private TextView infoTextView;
     private TableLayout boardTableLayout;
     private int [][] winningDiscs = new int[4][2];
@@ -66,7 +74,10 @@ public class MainActivity extends AppCompatActivity {
         else{
             winningDiscs = fourInARowGame.getWinningDiscs();
             info("Player " + result + " won!");
-            blinker.post(new Blinker());
+            blinker0.post(new Blinker());
+            blinker1.post(new Blinker());
+            blinker2.post(new Blinker());
+            blinker3.post(new Blinker());
         }
     }
 

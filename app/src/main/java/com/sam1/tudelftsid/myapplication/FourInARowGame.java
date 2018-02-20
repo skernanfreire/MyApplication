@@ -1,13 +1,9 @@
 package com.sam1.tudelftsid.myapplication;
 
-/**
- * Created by TUDelft SID on 16-Feb-18.
- */
-
 public class FourInARowGame {
 
     private int[] numberOfEmptyColumnCells={6,6,6,6,6,6,6};
-    private int[][] board = new int[4][2];
+    private int[][] board = new int[6][7];
     private int playerId = 1, playerWhoWon = 0,emptyColumnCells,column;
     private int[][] winningDiscs = new int[4][2];
     private int counter = 0;
@@ -46,7 +42,10 @@ public class FourInARowGame {
             return playerWhoWon;
     }
     private void registerDisc(int rowindex, int columnindex){
-        if (winningDiscs==null)winningDiscs=new int[4][2];
+        if (winningDiscs==null){
+            winningDiscs=new int[4][2];
+            counter = 0;
+        }
         winningDiscs[counter][0] = rowindex;
         winningDiscs[counter][1] = columnindex;
         counter++;
