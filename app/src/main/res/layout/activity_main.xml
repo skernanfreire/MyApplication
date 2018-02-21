@@ -11,55 +11,88 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/info_textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:lines="2"
-            android:hint="Information will appear here!"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/info_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:lines="2"
+                android:hint="Information will appear here!" />
+
+            <Button
+                android:id="@+id/new_game_button"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_margin="1dp"
+                android:visibility="invisible"
+                android:background="#bbbbbb"
+                android:text="New game"
+                android:onClick="newGameButtonClicked" />
+
+        </LinearLayout>
+
         <TableLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/board_tablelayout">
             <TableRow>
                 <ImageView
+                    android:tag="1"
+                    android:id="@+id/imageView1"
                     android:layout_height="48dp"
                     android:layout_width="48dp"
                     android:layout_margin="1dp"
                     android:background="#bbbbbb"
                     android:src="@drawable/cfgc48"/>
                 <ImageView
+                    android:tag="2"
+                    android:id="@+id/imageView2"
                     android:layout_height="48dp"
                     android:layout_width="48dp"
                     android:layout_margin="1dp"
                     android:background="#bbbbbb"
                     android:src="@drawable/cfgc48"/>
                 <ImageView
+                    android:tag="3"
+                    android:id="@+id/imageView3"
                     android:layout_height="48dp"
                     android:layout_width="48dp"
                     android:layout_margin="1dp"
                     android:background="#bbbbbb"
                     android:src="@drawable/cfgc48"/>
                 <ImageView
+                    android:tag="4"
+                    android:id="@+id/imageView4"
                     android:layout_height="48dp"
                     android:layout_width="48dp"
                     android:layout_margin="1dp"
                     android:background="#bbbbbb"
                     android:src="@drawable/cfgc48"/>
                 <ImageView
+                    android:tag="5"
+                    android:id="@+id/imageView5"
                     android:layout_height="48dp"
                     android:layout_width="48dp"
                     android:layout_margin="1dp"
                     android:background="#bbbbbb"
                     android:src="@drawable/cfgc48"/>
                 <ImageView
+                    android:tag="6"
+                    android:id="@+id/imageView6"
                     android:layout_height="48dp"
                     android:layout_width="48dp"
                     android:layout_margin="1dp"
                     android:background="#bbbbbb"
                     android:src="@drawable/cfgc48"/>
                 <ImageView
+                    android:tag="7"
+                    android:id="@+id/imageView7"
                     android:layout_height="48dp"
                     android:layout_width="48dp"
                     android:layout_margin="1dp"

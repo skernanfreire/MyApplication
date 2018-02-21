@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/buttons"
+            android:title="Buttons" />
+        <item android:id="@+id/drag_and_drop"
+            android:title="Drag &amp; drop" />
+        <item android:id="@+id/motion"
+            android:title="Motion" />
+    </group>
+
+</menu>
